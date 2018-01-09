@@ -34,6 +34,7 @@ Rails.application.routes.draw do
     get 'offlines/coding'
     get 'offlines/career_new'
     get 'offlines/coding_new'
+    get 'offlines/popup'
     post 'offlines/create'
     
     
