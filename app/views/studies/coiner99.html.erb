@@ -3,6 +3,46 @@
 
 <% if current_user!=NIL %>
 <% if current_user.id==1 %>
+
+<h2>offlines 신청한 사랑둥이들</h2>
+<table class="table table-hover">
+
+     <tr>
+         <th>번  호</th>
+         <th>카테고리</th>
+         <th>학  교</th>
+         <th>학  년</th>
+         <th>이  름</th>
+         <th>연락처</th>
+         <th>희망학과</th>
+         <th>지원동기</th>
+         <th>신청시각</th>
+         <th>아이디</th>
+     </tr>
+     
+     <% @offlines.each do |offline| %>
+       <tr>
+        <td class="table_info"><%= offline.id %></td>
+        <td class="table_info"><%= offline.category %></td>
+        <td class="table_info"><%= offline.team_name %></td>
+        <td class="table_info"><%= offline.address %></td>
+        <td class="table_info"><%= offline.name %></td>
+        <td class="table_info"><%= offline.phone %></td>
+        <td class="table_info"><%= offline.date %></td>
+        <td class="table_info"><%= offline.content %></td>
+        <td class="table_info"><%= offline.created_at %></td>
+        <td class="table_info"><%= offline.user_id %></td>
+
+
+        </tr>
+     <% end %>
+   
+     
+ </table>
+</br></br>     
+     
+     
+     
 <h2>코인하는사람들</h2>
 <table class="table table-hover">
 
