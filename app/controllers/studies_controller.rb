@@ -69,9 +69,9 @@ class StudiesController < ApplicationController
     
     def coiner99
        @users = User.all
-       @studies=Study.all
+       @studies = Study.all
        @applies = Apply.all
-        
+       @offlines = Offline.all
       end
     
     private
