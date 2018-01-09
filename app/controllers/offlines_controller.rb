@@ -1,6 +1,7 @@
 class OfflinesController < ApplicationController
   
   def index
+     @offline = Offline.all
   end
 
   def career
@@ -24,6 +25,7 @@ class OfflinesController < ApplicationController
     @offline.phone = params[:phone]
     @offline.date = params[:date]
     @offline.content = params[:content]
+    @offline.user_id = current_user.id
     @offline.save
     redirect_to "/offlines/index"
   end
