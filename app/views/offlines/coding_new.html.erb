@@ -4,10 +4,17 @@
 <div class="container center_hs">
 <h2 class="jua offline_apply_hs">2 0 1 8 겨 울 코 딩 특 강 신 청</h2>
 <div>
-    
+ 
+  <div
     
  <div class="qna_form center_hs">    
     <%= form_tag('/offlines/create', multipart: true, :id => 'contactform') do %>
+    
+            <p  class="form-group col-md-8 push-md-2 col-sm-10 push-sm-1 mb-5 ">
+           <div class="coding_poster"><%= image_tag("coding_new_poster.png")%> </div>    
+            </p>
+
+    
         <p  class="form-group col-md-8 push-md-2 col-sm-10 push-sm-1 mb-5 ">
             <label for="team_name"><span class="offline_new_title">학 교 명</span></label>
             <%= text_field_tag('team_name',nil, size: 70, placeholder: "진로특강에 참여한 학교 재학생만 선발합니다.",class:'form-control', :id => "contactteam") %>   
