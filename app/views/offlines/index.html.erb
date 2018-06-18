@@ -38,7 +38,7 @@
         
        <% if current_user.nil? %>  
              <div class="col-6 px-0 mx-0">
-                <%= link_to "/offlines/index" , :onclick => "myFunction()" do %> <%= image_tag("apply_blue.png", :class=>"img-fluid") %><%end%>
+                <%= link_to "/offlines/index" , :onclick => "myFunction3()" do %> <%= image_tag("apply_blue.png", :class=>"img-fluid") %><%end%>
              </div>
               <div class="col-6 px-0 for_b">
                 <%= link_to "/offlines/index" , :onclick => "myFunction()" do %> <%= image_tag("apply_red.png",  :class=>"img-fluid")%> <%end%>
@@ -47,9 +47,10 @@
             <div class="col-6 px-0 mx-0">
                 <%= link_to "/offlines/career_new" do %> <%= image_tag("apply_blue.png", :class=>"img-fluid") %><%end%>
              </div>
+
               <div class="col-6 px-0 for_b">
                   
-                   <%flag=0%>
+                   <% flag=0 %>
                      <% @offline.each do |offline| %>
                         
                         <% if offline.user_id == current_user.id %>
@@ -75,8 +76,7 @@
     
 
 
-
-    
+<!-- 소개 피피티 날리기
   <div id="div2" class="offline_page ">
         <div class="blank hidden-sm-down"></div>
         <div class="coding_intro hidden-sm-down"></div>
@@ -93,8 +93,7 @@
         </div>
         
     </div>
-    
-</div>
+</div> -->
 
 <script>
 function myFunction() {
@@ -102,5 +101,8 @@ function myFunction() {
 }
 function myFunction2() {
     alert("이미 신청되었습니다.");
+}
+function myFunction3() {
+    alert("진로특강은 신청 기간이 아닙니다. 코딩특강을 이용해 주세요.");
 }
 </script>
