@@ -29,7 +29,7 @@
         </p>
         <p  class="form-group col-md-8 push-md-2 col-sm-10 push-sm-1 mb-5 ">
             <label for="phone"><span class="offline_new_title">핸 드 폰 번 호</span></label>
-            <%= text_field_tag('phone',nil, size: 70, class:'form-control', :id => "contactphone") %>
+            <%= text_field_tag('phone',nil, size: 70, placeholder: "010-0000-0000의 포맷으로 입력해 주세요.", class:'form-control', :id => "contactphone") %>
         </p>
         <p  class="form-group col-md-8 push-md-2 col-sm-10 push-sm-1 mb-5 ">
             <label for="date"><span class="offline_new_title">옷 사 이 즈</span></label>
@@ -39,10 +39,12 @@
             <label for="content"><span class="offline_new_title">지 원 동 기</span></label>
             <%= text_area_tag('content',nil, cols: 70, rows: 10, placeholder: "1) 코딩 캠프에 지원한 이유(캠프에 성실히 참여할 학생을 선발하기  기준으로 사용할 예정입니다.) 2) 코딩 경험(코딩 캠프는 입문자를 위해 진행됩니다. 경험을 묻는 이유는 원활한 강의 진행을 위해서이니 경험이 없거나 적어도 걱정 마세요!) 감사합니다.", class:'form-control', :id => "contactcontent")  %>
         </p>
+ 
         <p  class="form-group col-md-8 push-md-2 col-sm-10 push-sm-1 mb-5 ">
             <span class="offline_new_title"></span>
             <%= hidden_field_tag('category','코딩') %>
         </p>
+ 
         <p  class="form-group col-md-8 push-md-2 col-sm-10 push-sm-1 mb-5 ">
             <%= submit_tag '',class: "submit_hs", :id => 'contactbtn' %>
             <%= link_to '', '/offlines/index', class: "back_hs" %>
